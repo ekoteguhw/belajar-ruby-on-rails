@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<div class="card">
+  <div class="card-body">
+    <h2><%= @todo.title %></h2>
+    <p>
+      <% if @todo.completed %>
+        completed: <%= fa_icon "check-circle" %>
+      <% else %>
+        completed: <%= fa_icon "times-circle" %>
+      <% end %>
+    </p>
+    <p>
+      <%= link_to 'Edit', edit_todo_path(@todo), class: 'btn btn-sm btn-warning' %> |
+      <%= link_to 'Back', todos_path, class: 'btn btn-sm btn-info' %>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo Scaffold - Simple web app using Ruby on Rails</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="/todos">TODO-SCAFFOLD</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </header>
+    <main role="main" class="container">
+      <%= yield %>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Developed by Ruby on Rails with db SQLITE3</span>
+      </div>
+    </footer>
+  </body>
+</html>
